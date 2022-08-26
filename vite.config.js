@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
 export default defineConfig({
 	server: {
-		port: 8001,
-		host: 'localhost'
+		hmr: {
+			host: 'localhost'
+		}
 	},
 	plugins: [
 		laravel({
@@ -15,8 +17,8 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
-			'@': 'resources/js',
-			'~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
+			'@': path.resolve(__dirname, 'resources/js'),
+			'~': path.resolve(__dirname, 'node_modules')
 		}
 	}
 })

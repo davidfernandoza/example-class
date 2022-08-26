@@ -1,12 +1,12 @@
 <template>
-	<h1>Hola</h1>
+	<h1>welcome</h1>
 </template>
 
 <script>
 	//import  from './'
 
 	export default {
-		name: 'index',
+		name: 'welcome',
 		//props:
 		//components: {},
 		data() {

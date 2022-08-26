@@ -1,10 +1,13 @@
 import '@/bootstrap.js'
-import Index from '@/components/index.vue'
+import { createApp } from 'vue/dist/vue.esm-bundler'
 
-import { createApp } from 'vue'
+// Components--------------------------------------
+import Welcome from '@/components/welcome.vue'
 
 const app = createApp({
-	Index
+	components: {
+		Welcome
+	}
 })
 
 app.mount('#app')
